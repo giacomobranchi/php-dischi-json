@@ -11,7 +11,7 @@ Bonus (da fare entro domani prima della correzione)
 Al click su un disco, recuperare e mostrare i dati del disco selezionato. */
 ?>
 
-
+<!DOCTYPE html>
 <html lang='en'>
 
 <head>
