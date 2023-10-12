@@ -33,7 +33,7 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato. */
         <div class="container">
 
             <div class="row">
-                <div v-for="song in songs" class="col-4 p-5">
+                <div v-for="(song, index) in songs" class="col-4 p-5" data-bs-toggle="modal" :data-bs-target="'#test' + index">
                     <div class="bg_card card text-center my-2">
                         <img class="card-img-top p-4" :src="song.poster" alt="Title">
                         <div class=" card-body">
@@ -43,8 +43,31 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato. */
 
                         </div>
                     </div>
+                    <div class="modal fade" :id="'test'+index" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class=" p-5">
+                                    <div class="bg_card card text-center my-2">
+                                        <img class="card-img-top p-4" :src="song.poster" alt="Title">
+                                        <div class=" card-body">
+                                            <h4 class="card-title text-center">{{song.title}}</h4>
+                                            <p class="card-text text-center">{{song.author}}</p>
+                                            <p class="card-text text-center">{{song.year}}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+
         </div>
 
 
